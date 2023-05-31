@@ -1,0 +1,20 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [[reagent "1.1.0"]
+  [medley  "1.2.0"]]
+
+ :builds
+ {:example
+  {:target      :browser
+   :output-dir  "example/js"
+   :asset-path  "js"
+   :modules     {:main {:entries [example.app]}}
+   :build-hooks [(cards.mochi.styles/compile!)]
+   :dev         {:closure-defines {cards.mochi.styles/compile-css? true}}
+   :devtools    {:before-load example.app/stop
+                 :after-load example.app/start
+                 :http-root "example"
+                 :http-port 8080}}}}

@@ -1,0 +1,16 @@
+{
+  "name": "compile-time-css-in-cljs",
+  "version": "1.0.0",
+  "description": "Write css in cljs, but compile to .css files.",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "shadow-cljs": "^2.15.3",
+    "stylis": "^4.0.10"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
